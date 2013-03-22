@@ -23,8 +23,7 @@
     
     PSUICollectionViewFlowLayout* flowLayout = [[PSUICollectionViewFlowLayout alloc] init];
     
-    CGRect frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-44);
-    _gifCollectionView = [[PSUICollectionView alloc] initWithFrame:frame collectionViewLayout:flowLayout];
+    _gifCollectionView = [[PSUICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     _gifCollectionView.backgroundColor = [UIColor whiteColor];
     [_gifCollectionView registerClass:[AnimatedGifCell class] forCellWithReuseIdentifier:@"AnimatedGifCell"];
     
@@ -36,6 +35,12 @@
     
     [self.view addSubview:_gifCollectionView];
 
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    _gifCollectionView.frame = self.view.frame;
 }
 
 - (void)setCategory:(NSInteger)category {
@@ -66,7 +71,7 @@
         [pb setItems:nil];
         [pb setData:GIFDATA forPasteboardType:@"com.compuserve.gif"];
         [pb setPersistent:YES];
-        [JCNotificationBannerPresenter enqueueNotificationWithTitle:@"Reaction Gifs" message:@"Copied to clipboard!" icon:nil tapHandler:nil];
+        [JCNotificationBannerPresenter enqueueNotificationWithTitle:@"Reaction Gifs" message:@"Copied to clipboard!" icon:[UIImage imageWithData:GIFDATA] tapHandler:nil];
     }
 }
 

@@ -22,9 +22,7 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    CGRect frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-44);
     _tableView.backgroundColor = [UIColor whiteColor];
-    _tableView.frame = frame;
     
     [self.view addSubview:_tableView];
     
@@ -43,6 +41,7 @@
     else {
         self.navigationItem.leftBarButtonItem = nil;
     }
+    _tableView.frame = self.view.frame;
 }
 
 
