@@ -13,6 +13,8 @@ enum CategoriesViewCellIds : int
     Categories_Clapping,
     Categories_Popcorn,
     Categories_Laughing,
+    Categories_Mad,
+    Categories_Upset,
     Categories_Disgust,
     Categories_Agreement,
     Categories_Excited,

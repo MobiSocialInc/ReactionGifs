@@ -162,10 +162,14 @@
             return @"laughing";
         case Categories_Miscellaneous:
             return @"miscellaneous";
+        case Categories_Mad:
+            return @"mad";
         case Categories_Excited:
             return @"excited";
         case Categories_Popcorn:
             return @"popcorn";
+        case Categories_Upset:
+            return @"upset";
         case Categories_What:
             return @"wat";
     }
@@ -187,12 +191,16 @@
             return @"Disgust";
         case Categories_Laughing:
             return @"Laughing";
+        case Categories_Mad:
+            return @"Mad";
         case Categories_Miscellaneous:
             return @"Miscellaneous";
         case Categories_Excited:
             return @"Excited";
         case Categories_Popcorn:
             return @"Popcorn";
+        case Categories_Upset:
+            return @"Upset";
         case Categories_What:
             return @"Wat.";
     }

@@ -133,12 +133,16 @@
             return 11;
         case Categories_Laughing:
             return 4;
+        case Categories_Mad:
+            return 6;
         case Categories_Miscellaneous:
             return 11;
         case Categories_Excited:
             return 10;
         case Categories_Popcorn:
             return 4;
+        case Categories_Upset:
+            return 12;
         case Categories_What:
             return 5;
     }
