@@ -197,9 +197,19 @@
 
 
 - (void)open2Plus {
-    NSString *stringURL = @"twoplus:";
+    NSString *stringURL = @"twoplus://share";
     NSURL *url = [NSURL URLWithString:stringURL];
     if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        
+        NSString* gifName = [NSString stringWithFormat:@"%@%d", [CategoriesViewController getCategorySuffix:_category], _selectedGifIndexPath.row+1];
+        
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:gifName ofType:@"gif"];
+        NSData *GIFDATA = [NSData dataWithContentsOfFile:filePath];
+        
+        UIPasteboard* pb = [UIPasteboard pasteboardWithName:@"mobisocial.pasteboard" create:NO];
+        [pb setItems:nil];
+        [pb setData:GIFDATA forPasteboardType:@"com.compuserve.gif"];
+        [pb setPersistent:YES];
         [[UIApplication sharedApplication] openURL:url];
     }
     else {
@@ -248,6 +258,61 @@
     self.title = [CategoriesViewController getCategoryName:_category];
 }
 
+- (void) showCopiedToast {
+    UILabel* toast = [[UILabel alloc] init];
+    toast.frame = CGRectMake(0, 0, self.view.frame.size.width - 100, 30);
+    toast.center = CGPointMake(self.view.frame.size.width / 2, _shareButtonsView.frame.size.height + 25);
+    toast.textAlignment = NSTextAlignmentCenter;
+    toast.text = @"Copied to pasteboard!";
+    toast.backgroundColor = [UIColor whiteColor];
+    toast.font = [UIFont fontWithName:@"STHeitiTC-Medium" size:17.0f];
+    toast.layer.cornerRadius = 15.0f;
+    toast.layer.borderColor = [UIColor blackColor].CGColor;
+    toast.layer.borderWidth = 1.0f;
+    toast.alpha = 0;
+    [self.view addSubview: toast];
+    
+    [UIView animateWithDuration:.5 animations:^{
+        toast.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [UIView animateWithDuration:1.0f delay:2.0f options:nil animations:^ {
+                toast.alpha = 0;
+            } completion:^(BOOL finished) {
+                if (finished) {
+                    [toast removeFromSuperview];
+                }
+            }];
+            
+        }
+    }];
+}
+
+- (void) showSharingOptions {
+    _shareButtonsHidden = NO;
+    [UIView animateWithDuration:0.3 animations:^{
+        _containerView.frame = CGRectMake(_containerView.frame.origin.x, _containerView.frame.origin.y+_shareButtonsView.frame.size.height, _containerView.frame.size.width, _containerView.frame.size.height-_shareButtonsView.frame.size.height);
+        
+        _gifCollectionView.frame = CGRectMake(0, 0, _containerView.frame.size.width, _containerView.frame.size.height);
+        
+    } completion:^(BOOL finished) {
+        if (finished) {
+        }
+    }];
+}
+
+- (void) hideSharingOptions {
+    _shareButtonsHidden = YES;
+    [UIView animateWithDuration:0.3 animations:^{
+        _containerView.frame = CGRectMake(_containerView.frame.origin.x, _containerView.frame.origin.y-_shareButtonsView.frame.size.height, _containerView.frame.size.width, _containerView.frame.size.height+_shareButtonsView.frame.size.height);
+        
+        _gifCollectionView.frame = CGRectMake(0, 0, _containerView.frame.size.width, _containerView.frame.size.height);
+    } completion:^(BOOL finished) {
+        if (finished) {
+        }
+    }];
+}
+
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(PSTCollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -270,18 +335,9 @@
         //selected one you already toggled, hide share buttons
         if([indexPath compare:_selectedGifIndexPath] == NSOrderedSame) {
             _selectedGifIndexPath = nil;
-            _shareButtonsHidden = YES;
-            
             [_gifCollectionView deselectItemAtIndexPath:indexPath animated:YES];
             [[_gifCollectionView cellForItemAtIndexPath:indexPath] setSelected:NO];
-            [UIView animateWithDuration:0.3 animations:^{
-                _containerView.frame = CGRectMake(_containerView.frame.origin.x, _containerView.frame.origin.y-_shareButtonsView.frame.size.height, _containerView.frame.size.width, _containerView.frame.size.height+_shareButtonsView.frame.size.height);
-                
-                _gifCollectionView.frame = CGRectMake(0, 0, _containerView.frame.size.width, _containerView.frame.size.height);
-            } completion:^(BOOL finished) {
-                if (finished) {
-                }
-            }];
+            [self hideSharingOptions];
         }
         else {
             _selectedGifIndexPath = indexPath;
@@ -290,19 +346,11 @@
             [pb setItems:nil];
             [pb setData:GIFDATA forPasteboardType:@"com.compuserve.gif"];
             [pb setPersistent:YES];
-            [JCNotificationBannerPresenter enqueueNotificationWithTitle:@"Copied to pasteboard!" message:@"Share it in your other apps." icon:[UIImage imageWithData:GIFDATA] tapHandler:nil];
+            //[JCNotificationBannerPresenter enqueueNotificationWithTitle:@"Copied to pasteboard!" message:@"Share it in your other apps." icon:[UIImage imageWithData:GIFDATA] tapHandler:nil];
             
+            [self showCopiedToast];
             if(_shareButtonsHidden) {
-                [UIView animateWithDuration:0.3 animations:^{
-                    _containerView.frame = CGRectMake(_containerView.frame.origin.x, _containerView.frame.origin.y+_shareButtonsView.frame.size.height, _containerView.frame.size.width, _containerView.frame.size.height-_shareButtonsView.frame.size.height);
-                    
-                    _gifCollectionView.frame = CGRectMake(0, 0, _containerView.frame.size.width, _containerView.frame.size.height);
-                    
-                } completion:^(BOOL finished) {
-                    if (finished) {
-                    }
-                }];
-                _shareButtonsHidden = NO;
+                [self showSharingOptions];
             }
         }
     }
