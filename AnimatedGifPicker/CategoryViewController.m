@@ -199,7 +199,13 @@
 - (void)open2Plus {
     NSString *stringURL = @"twoplus:";
     NSURL *url = [NSURL URLWithString:stringURL];
-    [[UIApplication sharedApplication] openURL:url];
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    else {
+        NSURL *itunesUrl = [NSURL URLWithString:@"itms://itunes.apple.com/us/app/2plus/id586030310"];
+        [[UIApplication sharedApplication] openURL:itunesUrl];
+    }
 }
 
 - (void)openMail {
@@ -212,8 +218,8 @@
         
         MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
         controller.mailComposeDelegate = self;
-        [controller setSubject:@"My Subject"];
-        [controller setMessageBody:@"Hello there." isHTML:NO];
+        [controller setSubject:@"Checkout this funny gif!"];
+        [controller setMessageBody:@"It's hilarious!" isHTML:NO];
         [controller addAttachmentData:GIFDATA mimeType:@"image/gif" fileName:[NSString stringWithFormat:@"%@.gif", gifName]];
         if (controller) [self presentModalViewController:controller animated:YES];
     } else {
