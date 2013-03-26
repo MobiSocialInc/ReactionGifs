@@ -46,7 +46,7 @@
     [self setCategory:_category index:_index];
     
     if(selected) {
-        self.contentView.layer.borderWidth = 2.0f;
+        self.contentView.layer.borderWidth = 4.0f;
     }
     else {
         self.contentView.layer.borderWidth = 0.0f;

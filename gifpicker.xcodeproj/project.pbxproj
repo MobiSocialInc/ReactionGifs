@@ -142,6 +142,13 @@
 		5685E7A116FBB84100949DE5 /* JCNotificationBannerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 5685E79916FBB84100949DE5 /* JCNotificationBannerWindow.m */; };
 		5685E7A216FBB84100949DE5 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5685E79A16FBB84100949DE5 /* LICENSE.txt */; };
 		5685E7A316FBB84100949DE5 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 5685E79B16FBB84100949DE5 /* README.markdown */; };
+		56ED8B5217011BA800AAC7CF /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B5017011BA800AAC7CF /* background.png */; };
+		56ED8B5317011BA800AAC7CF /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B5117011BA800AAC7CF /* background@2x.png */; };
+		56ED8B57170127F700AAC7CF /* 2plus_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B55170127F700AAC7CF /* 2plus_icon.png */; };
+		56ED8B58170127F700AAC7CF /* 2plus_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B56170127F700AAC7CF /* 2plus_icon@2x.png */; };
+		56ED8B5A1701323F00AAC7CF /* Mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B591701323F00AAC7CF /* Mail.png */; };
+		56ED8B5C1701329600AAC7CF /* imessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B5B1701329600AAC7CF /* imessage.png */; };
+		56ED8B5E170151EF00AAC7CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56ED8B5D170151EF00AAC7CF /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -309,6 +316,13 @@
 		5685E79916FBB84100949DE5 /* JCNotificationBannerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCNotificationBannerWindow.m; sourceTree = "<group>"; };
 		5685E79A16FBB84100949DE5 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		5685E79B16FBB84100949DE5 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		56ED8B5017011BA800AAC7CF /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		56ED8B5117011BA800AAC7CF /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		56ED8B55170127F700AAC7CF /* 2plus_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2plus_icon.png; sourceTree = "<group>"; };
+		56ED8B56170127F700AAC7CF /* 2plus_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2plus_icon@2x.png"; sourceTree = "<group>"; };
+		56ED8B591701323F00AAC7CF /* Mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mail.png; sourceTree = "<group>"; };
+		56ED8B5B1701329600AAC7CF /* imessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imessage.png; sourceTree = "<group>"; };
+		56ED8B5D170151EF00AAC7CF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +330,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56ED8B5E170151EF00AAC7CF /* MessageUI.framework in Frameworks */,
 				5685E77B16FA722600949DE5 /* MobileCoreServices.framework in Frameworks */,
 				5685E76C16FA6D1F00949DE5 /* ImageIO.framework in Frameworks */,
 				5685E76A16FA6D1400949DE5 /* QuartzCore.framework in Frameworks */,
@@ -363,6 +378,7 @@
 		5685E67416FA562700949DE5 = {
 			isa = PBXGroup;
 			children = (
+				56ED8B5D170151EF00AAC7CF /* MessageUI.framework */,
 				5685E77A16FA722600949DE5 /* MobileCoreServices.framework */,
 				5685E76B16FA6D1F00949DE5 /* ImageIO.framework */,
 				5685E76916FA6D1400949DE5 /* QuartzCore.framework */,
@@ -393,7 +409,10 @@
 		5685E68616FA562700949DE5 /* AnimatedGifPicker */ = {
 			isa = PBXGroup;
 			children = (
+				56ED8B54170127F700AAC7CF /* assets */,
 				5685E77716FA70AF00949DE5 /* AnimatedGifCell.h */,
+				56ED8B5017011BA800AAC7CF /* background.png */,
+				56ED8B5117011BA800AAC7CF /* background@2x.png */,
 				5685E77816FA70AF00949DE5 /* AnimatedGifCell.m */,
 				5685E68F16FA562700949DE5 /* AppDelegate.h */,
 				5685E78E16FBB84100949DE5 /* JCNotificationBannerPresenter */,
@@ -658,6 +677,17 @@
 			path = JCNotificationBannerPresenter;
 			sourceTree = "<group>";
 		};
+		56ED8B54170127F700AAC7CF /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				56ED8B55170127F700AAC7CF /* 2plus_icon.png */,
+				56ED8B5B1701329600AAC7CF /* imessage.png */,
+				56ED8B591701323F00AAC7CF /* Mail.png */,
+				56ED8B56170127F700AAC7CF /* 2plus_icon@2x.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -812,6 +842,12 @@
 				5663CE1016FD099800AD6B62 /* upset7.gif in Resources */,
 				5663CE1116FD099800AD6B62 /* upset8.gif in Resources */,
 				5663CE1216FD099800AD6B62 /* upset9.gif in Resources */,
+				56ED8B5217011BA800AAC7CF /* background.png in Resources */,
+				56ED8B5317011BA800AAC7CF /* background@2x.png in Resources */,
+				56ED8B57170127F700AAC7CF /* 2plus_icon.png in Resources */,
+				56ED8B58170127F700AAC7CF /* 2plus_icon@2x.png in Resources */,
+				56ED8B5A1701323F00AAC7CF /* Mail.png in Resources */,
+				56ED8B5C1701329600AAC7CF /* imessage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "PSTCollectionView.h"
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface CategoryViewController : UIViewController <PSTCollectionViewDelegateFlowLayout, PSTCollectionViewDataSource>
+@interface CategoryViewController : UIViewController <PSTCollectionViewDelegateFlowLayout, PSTCollectionViewDataSource, MFMailComposeViewControllerDelegate>
 
 - (void) setCategory:(NSInteger)category;
 
