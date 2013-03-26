@@ -206,7 +206,7 @@
         NSString *filePath = [[NSBundle mainBundle] pathForResource:gifName ofType:@"gif"];
         NSData *GIFDATA = [NSData dataWithContentsOfFile:filePath];
         
-        UIPasteboard* pb = [UIPasteboard pasteboardWithName:@"mobisocial.pasteboard" create:NO];
+        UIPasteboard* pb = [UIPasteboard pasteboardWithName:@"mobisocial.pasteboard" create:YES];
         [pb setItems:nil];
         [pb setData:GIFDATA forPasteboardType:@"com.compuserve.gif"];
         [pb setPersistent:YES];
@@ -261,7 +261,7 @@
 - (void) showCopiedToast {
     UILabel* toast = [[UILabel alloc] init];
     toast.frame = CGRectMake(0, 0, self.view.frame.size.width - 100, 30);
-    toast.center = CGPointMake(self.view.frame.size.width / 2, _shareButtonsView.frame.size.height + 25);
+    toast.center = CGPointMake(self.view.frame.size.width / 2, 25);
     toast.textAlignment = NSTextAlignmentCenter;
     toast.text = @"Copied to pasteboard!";
     toast.backgroundColor = [UIColor whiteColor];
@@ -270,13 +270,13 @@
     toast.layer.borderColor = [UIColor blackColor].CGColor;
     toast.layer.borderWidth = 1.0f;
     toast.alpha = 0;
-    [self.view addSubview: toast];
+    [_containerView addSubview: toast];
     
     [UIView animateWithDuration:.5 animations:^{
         toast.alpha = 1.0;
     } completion:^(BOOL finished) {
         if (finished) {
-            [UIView animateWithDuration:1.0f delay:2.0f options:nil animations:^ {
+            [UIView animateWithDuration:1.0f delay:.5f options:nil animations:^ {
                 toast.alpha = 0;
             } completion:^(BOOL finished) {
                 if (finished) {
