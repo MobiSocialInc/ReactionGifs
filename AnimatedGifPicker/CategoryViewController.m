@@ -242,7 +242,6 @@
                         error:(NSError*)error;
 {
     if (result == MFMailComposeResultSent) {
-        NSLog(@"It's away!");
     }
     [self dismissModalViewControllerAnimated:YES];
 }
@@ -263,7 +262,7 @@
     toast.frame = CGRectMake(0, 0, self.view.frame.size.width - 100, 30);
     toast.center = CGPointMake(self.view.frame.size.width / 2, 25);
     toast.textAlignment = NSTextAlignmentCenter;
-    toast.text = @"Copied to pasteboard!";
+    toast.text = @"Copied to clipboard!";
     toast.backgroundColor = [UIColor whiteColor];
     toast.font = [UIFont fontWithName:@"STHeitiTC-Medium" size:17.0f];
     toast.layer.cornerRadius = 15.0f;
@@ -346,7 +345,6 @@
             [pb setItems:nil];
             [pb setData:GIFDATA forPasteboardType:@"com.compuserve.gif"];
             [pb setPersistent:YES];
-            //[JCNotificationBannerPresenter enqueueNotificationWithTitle:@"Copied to pasteboard!" message:@"Share it in your other apps." icon:[UIImage imageWithData:GIFDATA] tapHandler:nil];
             
             [self showCopiedToast];
             if(_shareButtonsHidden) {

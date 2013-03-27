@@ -63,7 +63,6 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:gifName ofType:@"gif"];
     NSData *GIFDATA = [NSData dataWithContentsOfFile:filePath];
     
-    NSLog(gifName);
     _animatedGifImageView.image = [OLImage imageWithData:GIFDATA];
     
 }

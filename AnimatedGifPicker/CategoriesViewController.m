@@ -112,7 +112,7 @@
     [cell.contentView addSubview:title];
     
     UILabel* imageCount = [[UILabel alloc] init];
-    imageCount.frame = CGRectMake(220, 0, 100, 70);
+    imageCount.frame = CGRectMake(cell.contentView.frame.size.width-100, 0, 100, 70);
     imageCount.backgroundColor = [UIColor clearColor];
     imageCount.font = [UIFont fontWithName:@"STHeitiTC-Light" size:13.0f];
     imageCount.textColor = [UIColor colorWithRed:33.0/255.0 green:33.0/255.0 blue:33.0/255.0 alpha:1];

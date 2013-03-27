@@ -149,6 +149,16 @@
 		56ED8B5A1701323F00AAC7CF /* Mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B591701323F00AAC7CF /* Mail.png */; };
 		56ED8B5C1701329600AAC7CF /* imessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B5B1701329600AAC7CF /* imessage.png */; };
 		56ED8B5E170151EF00AAC7CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56ED8B5D170151EF00AAC7CF /* MessageUI.framework */; };
+		56ED8B66170223C300AAC7CF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B64170223C300AAC7CF /* icon.png */; };
+		56ED8B67170223C300AAC7CF /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B65170223C300AAC7CF /* icon@2x.png */; };
+		56ED8B6A1702287800AAC7CF /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B681702287800AAC7CF /* icon-72.png */; };
+		56ED8B6B1702287800AAC7CF /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B691702287800AAC7CF /* icon-72@2x.png */; };
+		56ED8B7117024AD900AAC7CF /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B6D17024AD900AAC7CF /* Default-568h.png */; };
+		56ED8B7217024AD900AAC7CF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B6E17024AD900AAC7CF /* Default-568h@2x.png */; };
+		56ED8B7317024AD900AAC7CF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B6F17024AD900AAC7CF /* Default.png */; };
+		56ED8B7417024AD900AAC7CF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B7017024AD900AAC7CF /* Default@2x.png */; };
+		56ED8B7717024C4500AAC7CF /* Default@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B7517024C4500AAC7CF /* Default@2x~ipad.png */; };
+		56ED8B7817024C4500AAC7CF /* Default~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 56ED8B7617024C4500AAC7CF /* Default~ipad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -323,6 +333,16 @@
 		56ED8B591701323F00AAC7CF /* Mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mail.png; sourceTree = "<group>"; };
 		56ED8B5B1701329600AAC7CF /* imessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imessage.png; sourceTree = "<group>"; };
 		56ED8B5D170151EF00AAC7CF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		56ED8B64170223C300AAC7CF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		56ED8B65170223C300AAC7CF /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		56ED8B681702287800AAC7CF /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
+		56ED8B691702287800AAC7CF /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
+		56ED8B6D17024AD900AAC7CF /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
+		56ED8B6E17024AD900AAC7CF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		56ED8B6F17024AD900AAC7CF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		56ED8B7017024AD900AAC7CF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		56ED8B7517024C4500AAC7CF /* Default@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~ipad.png"; sourceTree = "<group>"; };
+		56ED8B7617024C4500AAC7CF /* Default~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~ipad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -681,11 +701,37 @@
 			isa = PBXGroup;
 			children = (
 				56ED8B55170127F700AAC7CF /* 2plus_icon.png */,
+				56ED8B6C17024AD900AAC7CF /* splash */,
+				56ED8B63170223C300AAC7CF /* icon */,
 				56ED8B5B1701329600AAC7CF /* imessage.png */,
 				56ED8B591701323F00AAC7CF /* Mail.png */,
 				56ED8B56170127F700AAC7CF /* 2plus_icon@2x.png */,
 			);
 			path = assets;
+			sourceTree = "<group>";
+		};
+		56ED8B63170223C300AAC7CF /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				56ED8B64170223C300AAC7CF /* icon.png */,
+				56ED8B681702287800AAC7CF /* icon-72.png */,
+				56ED8B691702287800AAC7CF /* icon-72@2x.png */,
+				56ED8B65170223C300AAC7CF /* icon@2x.png */,
+			);
+			path = icon;
+			sourceTree = "<group>";
+		};
+		56ED8B6C17024AD900AAC7CF /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				56ED8B7517024C4500AAC7CF /* Default@2x~ipad.png */,
+				56ED8B7617024C4500AAC7CF /* Default~ipad.png */,
+				56ED8B6D17024AD900AAC7CF /* Default-568h.png */,
+				56ED8B6E17024AD900AAC7CF /* Default-568h@2x.png */,
+				56ED8B6F17024AD900AAC7CF /* Default.png */,
+				56ED8B7017024AD900AAC7CF /* Default@2x.png */,
+			);
+			path = splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -848,6 +894,16 @@
 				56ED8B58170127F700AAC7CF /* 2plus_icon@2x.png in Resources */,
 				56ED8B5A1701323F00AAC7CF /* Mail.png in Resources */,
 				56ED8B5C1701329600AAC7CF /* imessage.png in Resources */,
+				56ED8B66170223C300AAC7CF /* icon.png in Resources */,
+				56ED8B67170223C300AAC7CF /* icon@2x.png in Resources */,
+				56ED8B6A1702287800AAC7CF /* icon-72.png in Resources */,
+				56ED8B6B1702287800AAC7CF /* icon-72@2x.png in Resources */,
+				56ED8B7117024AD900AAC7CF /* Default-568h.png in Resources */,
+				56ED8B7217024AD900AAC7CF /* Default-568h@2x.png in Resources */,
+				56ED8B7317024AD900AAC7CF /* Default.png in Resources */,
+				56ED8B7417024AD900AAC7CF /* Default@2x.png in Resources */,
+				56ED8B7717024C4500AAC7CF /* Default@2x~ipad.png in Resources */,
+				56ED8B7817024C4500AAC7CF /* Default~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
