@@ -10,7 +10,6 @@
 #import "AnimatedGifCell.h"
 #import "CategoriesViewController.h"
 #import "AppDelegate.h"
-#import "JCNotificationBannerPresenter.h"
 
 @implementation CategoryViewController {
     
