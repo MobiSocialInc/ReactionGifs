@@ -169,7 +169,7 @@
 		5663CE0416FD099800AD6B62 /* upset7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = upset7.gif; sourceTree = "<group>"; };
 		5663CE0516FD099800AD6B62 /* upset8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = upset8.gif; sourceTree = "<group>"; };
 		5663CE0616FD099800AD6B62 /* upset9.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = upset9.gif; sourceTree = "<group>"; };
-		5685E67D16FA562700949DE5 /* Reaction Gifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reaction Gifs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5685E67D16FA562700949DE5 /* GIF It Back.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GIF It Back.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5685E68016FA562700949DE5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5685E68216FA562700949DE5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5685E68416FA562700949DE5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -384,7 +384,7 @@
 		5685E67E16FA562700949DE5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5685E67D16FA562700949DE5 /* Reaction Gifs.app */,
+				5685E67D16FA562700949DE5 /* GIF It Back.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -700,7 +700,7 @@
 			);
 			name = gifpicker;
 			productName = AnimatedGifPicker;
-			productReference = 5685E67D16FA562700949DE5 /* Reaction Gifs.app */;
+			productReference = 5685E67D16FA562700949DE5 /* GIF It Back.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -975,7 +975,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AnimatedGifPicker/gifpicker-Prefix.pch";
 				INFOPLIST_FILE = "AnimatedGifPicker/gifpicker-Info.plist";
-				PRODUCT_NAME = "Reaction Gifs";
+				PRODUCT_NAME = "GIF It Back";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -986,7 +986,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AnimatedGifPicker/gifpicker-Prefix.pch";
 				INFOPLIST_FILE = "AnimatedGifPicker/gifpicker-Info.plist";
-				PRODUCT_NAME = "Reaction Gifs";
+				PRODUCT_NAME = "GIF It Back";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
