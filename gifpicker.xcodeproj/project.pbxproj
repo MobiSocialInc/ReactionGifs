@@ -975,6 +975,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AnimatedGifPicker/gifpicker-Prefix.pch";
 				INFOPLIST_FILE = "AnimatedGifPicker/gifpicker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "GIF It Back";
 				WRAPPER_EXTENSION = app;
 			};
@@ -986,6 +987,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AnimatedGifPicker/gifpicker-Prefix.pch";
 				INFOPLIST_FILE = "AnimatedGifPicker/gifpicker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "GIF It Back";
 				WRAPPER_EXTENSION = app;
 			};

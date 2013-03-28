@@ -61,7 +61,7 @@
     navBar.layer.shadowRadius = 1.5f;
     navBar.layer.shadowOpacity = .4f;
     navBar.layer.masksToBounds = NO;
-    navBar.shadowImage = [[UIImage alloc] init];
+    navBar.layer.shadowPath = [[UIBezierPath bezierPathWithRect:navBar.bounds] CGPath];
     
     navBar.tintColor = [UIColor darkGrayColor];
     
